@@ -10,8 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Topic_01_CheckEnvironment {
-	WebDriver driver;
-    //WebDriver driver;
+    WebDriver driver;
 
 	@Test
 	public void TC_01_CheckUrlAndTitle() {
