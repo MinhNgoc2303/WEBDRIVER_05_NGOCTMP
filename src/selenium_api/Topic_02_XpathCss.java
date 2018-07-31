@@ -30,22 +30,25 @@ public class Topic_02_XpathCss {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://live.guru99.com/");
 		
-		String title = driver.findElement(By.xpath("//title[text()='Home page']")).getText();
+		String title = driver.getTitle();
 		Assert.assertEquals(title, "Home page");
 		
 		driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
-		
 		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
 		
 		 driver.navigate().back();
+		//Ve lai page login thanh cong 
+		 Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login-form']")).isDisplayed());
 		 
-		 String ActualtextLogin = driver.findElement(By.linkText("http://live.guru99.com/index.php/customer/account/login/")).getText();
-		 Assert.assertEquals(ActualtextLogin, "http://live.guru99.com/index.php/customer/account/login/" );
-
+		 String loginURL = driver.getCurrentUrl();
+		 Assert.assertEquals(loginURL, "http://live.guru99.com/index.php/customer/account/login/" );
+		 
 		 driver.navigate().forward();
+		 //Ve lai trang register thanh cong 
+		 Assert.assertTrue(driver.findElement(By.xpath("//form[@id='form-validate']")).isDisplayed());
 		 
-		 String ActualtextCreate = driver.findElement(By.linkText("http://live.guru99.com/index.php/customer/account/create/")).getText();
-		 Assert.assertEquals(ActualtextCreate, "http://live.guru99.com/index.php/customer/account/create/" );
+		 String RegisterURL = driver.getCurrentUrl();
+		 Assert.assertEquals(RegisterURL, "http://live.guru99.com/index.php/customer/account/create/");
 		  
 	  }
 	
@@ -142,6 +145,7 @@ public class Topic_02_XpathCss {
 
   @AfterClass
   public void afterClass() {
+	  driver.quit();
   }
 
 }
