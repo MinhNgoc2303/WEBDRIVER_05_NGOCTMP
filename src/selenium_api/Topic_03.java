@@ -23,14 +23,12 @@ public class Topic_03 {
 		System.setProperty("webdriver.ie.driver", ".//driver//IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		
-		
 		 //driver = new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("http://daominhdam.890m.com/");
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		  
 	  }
-	
 	
   @Test 
   public void TC_01_CheckDisplay() throws Exception {
@@ -42,7 +40,6 @@ public class Topic_03 {
 	 Assert.assertTrue(CheckControlDisplay(emailTextBox));
 	 Assert.assertTrue(CheckControlDisplay(CheckBox));
 	 Assert.assertTrue(CheckControlDisplay(EducationTextArea));
-  
   
   if(CheckControlDisplay(emailTextBox))  {
 	  emailTextBox.sendKeys(" Automation Testing");
