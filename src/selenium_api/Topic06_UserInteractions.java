@@ -27,7 +27,7 @@ public class Topic06_UserInteractions {
 	  driver.manage().window().maximize();
   }
   
-  //@Test
+  @Test
   public void TS01_HovermouseElement_01() throws Exception {
 	  driver.get("http://daominhdam.890m.com/");
 	  
