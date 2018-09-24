@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="classes" thread-count = "3">
+
+  <test name="Run on Chrome">
+  <parameter name = "browser" value = "chrome"/>
+    <classes>
+      <class 
+      
+      		name="testNG.Parameter_MultiBrowser"/>
+    </classes>
+  </test> 
+ 
+</suite> 

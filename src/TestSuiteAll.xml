@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run all Test Suite">
+
+<suite name="ETS Suite">
+    <suite-files>
+        <suite-file path="TestSuite.xml" />
+        <suite-file path="TestSuite02.xml" />
+    </suite-files>
+</suite>
+  
+  
+</suite> 
